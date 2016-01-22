@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+// Placeholder colour
+
+/* uncss:ignore */
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: $placeholder;
+}
+
+/* uncss:ignore */
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder;
+}
+
+/* uncss:ignore */
+::-moz-placeholder { /* Firefox 19+ */
+  color: $placeholder;
+}
+
+/* uncss:ignore */
+:-ms-input-placeholder { /* IE 10+ */
+  color: $placeholder;
+}
+
+/* uncss:ignore */
+::-ms-input-placeholder { /* Edge */
+  color: $placeholder;
+}
+
+// Extend the padding zero class from basscss
+
+@media #{$breakpoint-sm} {
+  .sm-p0 { padding: 0; }
+}
+
+@media #{$breakpoint-md} {
+  .sm-p0 { padding: 0; }
+}
+
+@media #{$breakpoint-lg} {
+  .sm-p0 { padding: 0; }
+}

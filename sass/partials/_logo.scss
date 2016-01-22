@@ -1,0 +1,10 @@
+.logo {
+  width: 50px;
+  height: auto;
+
+  @media #{$breakpoint-sm} {
+    width: 75px;
+    float: none;
+  }
+
+}

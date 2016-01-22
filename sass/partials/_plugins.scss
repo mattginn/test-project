@@ -1,0 +1,13 @@
+/* uncss:ignore */
+.parsley-errors-list {
+  display: none;
+}
+
+/* uncss:ignore */
+.parsley-error {
+  border-color: $red;
+  color: $red;
+  &:focus {
+    border-color: $red;
+  }
+}

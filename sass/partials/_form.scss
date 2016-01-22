@@ -1,0 +1,141 @@
+.form-container {
+  box-shadow: 0 2px 5px rgba(#ebecec, 0.45);
+}
+
+.form-width {
+  max-width: $form-width;
+}
+
+.form-signup {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @media #{$breakpoint-sm} {
+    margin-top: $space-3;
+    margin-bottom: $space-3;
+  }
+}
+
+label {
+  font-family: $heading-font-family;
+  color: $heading-color;
+  font-size: $label-font-size;
+}
+
+// Terms and conditions label
+.tc-label {
+  color: #8890a4;
+  font-family: $font-family;
+  @media #{$breakpoint-sm} {
+    margin-top: 13px;
+  }
+}
+
+// Submit button
+.btn-submit {
+  font-size: 15px;
+  height: 48px;
+  width: 100%;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  min-width: 185px;
+}
+
+// Account sign in text
+.acc-si {
+  @media #{$breakpoint-sm} {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    padding: 1.5rem;
+  }
+}
+
+// Fields
+
+input {
+  &.field {
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.2s ease;
+    @media #{$breakpoint-sm} {
+      height: 46px;
+    }
+    &:not(.parsley-error) {
+      &:focus {
+        border-color: $border-active-color;
+        background-color: $field-active-background;
+      }
+    }
+  }
+}
+
+// Checkbox custom
+
+.checkbox-custom {
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  margin: 3px 10px 0 0;
+  cursor: pointer;
+
+  > input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    appearance: none;
+    opacity: 0;
+
+    &:checked {
+      + .check {
+        opacity: 1;
+      }
+    }
+  }
+
+  .check {
+    opacity: 0;
+    position: absolute;
+    background: $field-active-background;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    border-radius: 3px;
+    border: 1px solid #d9dadc;
+    z-index: 1;
+    transition: opacity 0.2s linear;
+    will-change: opacity;
+
+    &:before {
+      content: "";
+      width: 10px;
+      height: 1px;
+      background: #969daf;
+      transform: rotate(-50deg);
+      position: absolute;
+      top: 7px;
+      right: 0px;
+    }
+
+    &:after {
+      content: "";
+      width: 4px;
+      height: 1px;
+      background: #969daf;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 9px;
+      left: 2px;
+    }
+  }
+
+
+}
